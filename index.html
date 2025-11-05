@@ -1,18 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Festival de Futebol Amador Bolaverdão</title>
 
 <style>
-/* --- VARIÁVEIS DE ESTILO --- */
 :root {
   --verde: #1C8C3B;
   --verde-claro: #43A047;
-  --verde-suave: rgba(28, 140, 59, 0.05); /* verde 5% */
+  --verde-suave: rgba(28, 140, 59, 0.05); /* Verde 5% */
   --fundo: #f9fafb;
-  --sombra: rgba(0,0,0,0.08);
+  --sombra: rgba(0, 0, 0, 0.08);
 }
 
 body {
@@ -45,7 +44,7 @@ button:hover { background: var(--verde-claro); }
 
 section { padding: 60px 10%; }
 
-/* --- HEADER --- */
+/* HEADER */
 header {
   background: var(--verde-suave);
   color: var(--verde);
@@ -61,7 +60,7 @@ header h1 {
   margin: 0;
 }
 
-/* --- NAV --- */
+/* NAV */
 nav {
   background: var(--verde);
   display: flex;
@@ -76,7 +75,7 @@ nav a {
 }
 nav a:hover { background: var(--verde-claro); }
 
-/* --- CONTAINERS --- */
+/* BOX */
 .box-verde {
   background: #e8f5e9;
   border-radius: 16px;
@@ -85,7 +84,7 @@ nav a:hover { background: var(--verde-claro); }
   box-shadow: 0 2px 10px var(--sombra);
 }
 
-/* --- GALERIA --- */
+/* GALERIA */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -106,30 +105,32 @@ nav a:hover { background: var(--verde-claro); }
   box-shadow: 0 4px 10px var(--sombra);
 }
 
-/* --- MODAL --- */
+/* MODAL */
 #imgModal {
   display: none;
   position: fixed;
   z-index: 1000;
   left: 0; top: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.9);
+  background: rgba(0, 0, 0, 0.9);
   justify-content: center;
   align-items: center;
 }
 #imgModal img {
-  max-width: 90%; max-height: 80%;
+  max-width: 90%;
+  max-height: 80%;
   border-radius: 8px;
 }
 #imgModal span {
   position: absolute;
-  top: 30px; right: 50px;
+  top: 30px;
+  right: 50px;
   font-size: 36px;
   color: #fff;
   cursor: pointer;
 }
 
-/* --- FORMULÁRIO --- */
+/* FORMULÁRIO */
 form {
   max-width: 480px;
   margin: 0 auto;
@@ -151,7 +152,7 @@ input {
 input:focus { outline: 2px solid var(--verde); }
 form p { font-size: 14px; margin-top: 12px; }
 
-/* --- TABELAS --- */
+/* TABELAS */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -167,7 +168,7 @@ table td {
   padding: 8px;
 }
 
-/* --- FOOTER --- */
+/* FOOTER */
 footer {
   background: var(--verde);
   color: white;
@@ -177,7 +178,6 @@ footer {
 }
 footer img { height: 60px; margin-top: 10px; }
 
-/* --- RESPONSIVO --- */
 @media (max-width: 768px) {
   section { padding: 40px 6%; }
   .gallery img { width: 45%; height: auto; }
@@ -241,10 +241,8 @@ footer img { height: 60px; margin-top: 10px; }
 <section id="projeto" class="box-verde">
   <h2>🏆 Festival de Futebol Amador Bolaverdão 2025/2026</h2>
   <p><strong>Objeto:</strong> O Festival de Futebol Amador Bolaverdão é uma iniciativa esportiva e sociocultural que visa promover a integração comunitária e o fortalecimento dos vínculos sociais através do futebol, em Teofilândia (Bahia). O evento é uma realização do <strong>Clube dos Tenistas da Bahia (CTB)</strong>, com apoio de empresas parceiras e incentivo via <strong>Lei de Incentivo ao Esporte (Lei nº 11.438/2006)</strong>.</p>
-
   <h3>🎯 Objetivo Geral</h3>
   <p>Promover o Festival de Futebol Amador Bolaverdão 2025/2026, proporcionando um espaço de integração esportiva, lazer e desenvolvimento humano, com ênfase na educação, inclusão social, respeito e sustentabilidade.</p>
-
   <h3>🎯 Objetivos Específicos</h3>
   <ul>
     <li>Incentivar a prática esportiva regular entre jovens e adultos, promovendo hábitos saudáveis e melhoria da qualidade de vida.</li>
@@ -256,11 +254,8 @@ footer img { height: 60px; margin-top: 10px; }
     <li>Estimular a formação esportiva e social de jovens Sub-17.</li>
     <li>Divulgar boas práticas de governança e integridade esportiva.</li>
   </ul>
-
   <h3>💬 Justificativa</h3>
   <p>Desde sua criação, o Bolaverdão consolidou-se como um dos maiores festivais de futebol amador da Bahia, unindo comunidades, famílias e escolas em torno do esporte e da cultura popular. Ele responde à demanda por eventos esportivos estruturados nas comunidades rurais e periféricas, promovendo inclusão social e convivência pacífica.</p>
-
-  <p>O projeto impulsiona a economia local, movimenta pequenos comércios e valoriza o sentimento de pertencimento comunitário. Por seu caráter educativo, integrador e sustentável, o Bolaverdão se alinha aos <strong>ODS</strong> da ONU: <em>Saúde e Bem-Estar, Educação de Qualidade, Igualdade de Gênero, Redução das Desigualdades e Paz e Justiça.</em></p>
 </section>
 
 <!-- OFICINAS -->
@@ -321,7 +316,7 @@ footer img { height: 60px; margin-top: 10px; }
 <!-- PATROCINADORES -->
 <section id="patrocinadores" class="box-verde">
   <h2>Patrocinadores e Apoiadores</h2>
-  <p>O Festival Bolaverdão é uma realização do <strong>Clube dos Tenistas da Bahia (CTB)</strong>, com apoio do <strong>Ministério do Esporte</strong>, <strong>Equinox Gold</strong> via Lei de Incentivo ao Esporte.</p>
+  <p>O Festival Bolaverdão é uma realização do <strong>Clube dos Tenistas da Bahia (CTB)</strong>, com apoio do <strong>Ministério do Esporte</strong>, <strong>Equinox Gold</strong> e <strong>Banco Itaú</strong>, via Lei de Incentivo ao Esporte.</p>
   <div style="text-align:center;">
     <img src="patrocinador.png" alt="Patrocinadores" style="max-width:90%;border:2px solid var(--verde);border-radius:12px;">
   </div>
@@ -330,12 +325,12 @@ footer img { height: 60px; margin-top: 10px; }
 <footer>
   <p><b>Clube dos Tenistas da Bahia</b><br>
   CNPJ 23.146.328/0001-16<br>
-  Marcos Leão – (75) 99881-4111  |  Paulo Carneiro – (71) 98530-4903</p>
-  <img src="ctb.png" alt="CTB Logo" />
+  Marcos Leão – (75) 99881-4111 | Paulo Carneiro – (71) 98530-4903</p>
+  <img src="ctb.png" alt="CTB Logo">
 </footer>
 
 <script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbztzpzpECsHIQDzIhCL-SOLXWbFSSMryZoT-ag7n4mLHbPjDSt5Ht11jSPEi7QLkbdbLg/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxQfkJkwO4aw8AyPLyiyMcsgmovRMolEzYbxVzIGpLS70pWbGz6wMMSMfEuj3OZ1IIYdg/exec";
 
 document.getElementById("inscricaoForm").addEventListener("submit", async e => {
   e.preventDefault();
