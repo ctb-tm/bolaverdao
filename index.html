@@ -3,198 +3,199 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Festival de Futebol Amador Bolaverdão 2025/2026 - CTB Bahia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <title>Festival de Futebol Amador Bolaverdão</title>
   <style>
-    body { font-family: 'Montserrat', sans-serif; margin: 0; background: #fff; color: #333; }
-    header { display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 4px solid #1C8C3B; padding: 10px 40px; flex-wrap: wrap; }
-    header img { height: 60px; object-fit: contain; }
-    header h1 { color: #1C8C3B; font-weight: 700; font-size: 16pt; text-align: right; line-height: 1.2; margin: 10px 0; }
-    nav { background: #1C8C3B; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 10; }
-    nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: 600; }
-    section { padding: 40px; max-width: 1000px; margin: auto; }
-    h2 { color: #1C8C3B; border-left: 5px solid #1C8C3B; padding-left: 10px; }
-    .video-container { display: flex; justify-content: center; }
-    video { width: 100%; max-width: 900px; border: 4px solid #1C8C3B; border-radius: 8px; }
-    .carousel { display: flex; overflow-x: auto; gap: 10px; scroll-behavior: smooth; flex-wrap: wrap; justify-content: center; }
-    .carousel img { height: 180px; border-radius: 8px; border: 2px solid #1C8C3B; cursor: pointer; transition: transform 0.2s ease; }
-    .carousel img:hover { transform: scale(1.05); }
-    .box-verde { background: linear-gradient(180deg, rgba(28,140,59,0.1) 0%, rgba(255,255,255,1) 100%); padding: 30px; border-radius: 12px; border: 2px solid #1C8C3B; }
-    form { background: #fff; border: 2px solid #1C8C3B; border-radius: 10px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
-    label { font-weight: 600; display: block; margin-top: 15px; }
-    input[type=text], input[type=email] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-top: 5px; }
-    input[type=checkbox] { margin-top: 10px; }
-    .btn { background: #1C8C3B; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-top: 15px; }
-    .btn:hover { background: #157431; }
-    .pdf-links { margin-top: 20px; }
-    .pdf-links a { background: #1C8C3B; color: #fff; padding: 8px 15px; border-radius: 6px; text-decoration: none; margin: 5px; display: inline-block; }
-    ul { line-height: 1.8; }
-    footer { background: #1C8C3B; color: white; text-align: center; padding: 20px; margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; }
-    footer div { margin: 10px; }
-    /* Lightbox Modal */
-    #lightbox { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); display: none; justify-content: center; align-items: center; z-index: 9999; }
-    #lightbox img { max-width: 90%; max-height: 90%; border-radius: 10px; box-shadow: 0 0 20px rgba(255,255,255,0.3); }
+    body { font-family: Arial, sans-serif; margin: 0; background-color: #fff; color: #333; }
+    header { background: linear-gradient(90deg, #1C8C3B, #43A047); color: white; padding: 20px 0; text-align: center; font-size: 18px; font-weight: bold; }
+    nav { background-color: #1C8C3B; display: flex; justify-content: center; flex-wrap: wrap; }
+    nav a { color: white; text-decoration: none; padding: 14px 20px; font-weight: bold; }
+    nav a:hover { background-color: #43A047; }
+    section { padding: 40px 10%; }
+    h2 { color: #1C8C3B; border-left: 6px solid #1C8C3B; padding-left: 10px; }
+    .box-verde { background: linear-gradient(135deg, #e6f5ea 10%, #d0ecd8 100%); border: 2px solid #1C8C3B; border-radius: 12px; padding: 25px; }
+    .gallery { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+    .gallery img { width: 180px; height: 120px; border-radius: 8px; border: 2px solid #1C8C3B; cursor: pointer; transition: transform 0.2s; }
+    .gallery img:hover { transform: scale(1.05); }
+    form { max-width: 500px; margin: 0 auto; background: #f9f9f9; border: 2px solid #1C8C3B; border-radius: 12px; padding: 25px; }
+    label { display: block; font-weight: bold; margin-top: 15px; }
+    input, select { width: 100%; padding: 10px; margin-top: 5px; border-radius: 5px; border: 1px solid #ccc; }
+    button { background-color: #1C8C3B; color: white; border: none; padding: 10px 20px; border-radius: 5px; margin-top: 20px; cursor: pointer; font-weight: bold; }
+    button:hover { background-color: #43A047; }
+    footer { background-color: #1C8C3B; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+    .footer-info { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 10px; }
+    .footer-info img { width: 100px; }
+    iframe, video { width: 100%; max-width: 800px; border: 2px solid #1C8C3B; border-radius: 12px; display: block; margin: 0 auto; }
   </style>
 </head>
 <body>
 
-  <!-- CABEÇALHO -->
-  <header>
-    <img src="ctb.png" alt="Logo CTB">
-    <img src="bolaverdao.png" alt="Logo Bolaverdão">
+<header>
+  <div style="display:flex; justify-content:space-around; align-items:center; flex-wrap:wrap;">
+    <img src="ctb.png" alt="CTB" style="height:60px;">
     <h1>FESTIVAL DE FUTEBOL AMADOR<br>BOLAVERDÃO</h1>
-  </header>
+    <img src="bolaverdao.png" alt="Bolaverdão" style="height:60px;">
+  </div>
+</header>
 
-  <!-- MENU -->
-  <nav>
-    <a href="#inicio">Início</a>
-    <a href="#fotos">Fotos</a>
-    <a href="#projeto">Projeto</a>
-    <a href="#inscricao">Inscrição</a>
-    <a href="#equipe">Equipe</a>
-    <a href="#contato">Contato</a>
-  </nav>
+<nav>
+  <a href="#inicio">Início</a>
+  <a href="#fotos">Fotos</a>
+  <a href="#projeto">Projeto</a>
+  <a href="#oficinas">Oficinas</a>
+  <a href="#cronograma">Cronograma</a>
+  <a href="#inscricao">Inscrição</a>
+  <a href="#equipe">Equipe</a>
+  <a href="#patrocinadores">Patrocinadores</a>
+</nav>
 
-  <!-- INÍCIO -->
-  <section id="inicio">
-    <h2>Esporte, Cultura e Comunidade em Movimento</h2>
-    <div class="video-container">
-      <video controls poster="bola1.jpg">
-        <source src="video.mp4" type="video/mp4">
-        Seu navegador não suporta o vídeo.
-      </video>
-    </div>
-  </section>
+<!-- INÍCIO -->
+<section id="inicio">
+  <h2>Esporte, Cultura e Comunidade em Movimento</h2>
+  <video controls poster="bolaverdao.png">
+    <source src="video.mp4" type="video/mp4">
+    Seu navegador não suporta vídeos.
+  </video>
+</section>
 
-  <!-- GALERIA DE FOTOS -->
-  <section id="fotos">
-    <h2>Galeria de Fotos</h2>
-    <div class="carousel">
-      <img src="bola1.jpg" alt="Foto 1" onclick="showImage('bola1.jpg')">
-      <img src="bola2.jpg" alt="Foto 2" onclick="showImage('bola2.jpg')">
-      <img src="bola3.jpg" alt="Foto 3" onclick="showImage('bola3.jpg')">
-      <img src="bola4.jpg" alt="Foto 4" onclick="showImage('bola4.jpg')">
-      <img src="bola5.jpg" alt="Foto 5" onclick="showImage('bola5.jpg')">
-      <img src="bola6.jpg" alt="Foto 6" onclick="showImage('bola6.jpg')">
-      <img src="bola7.jpg" alt="Foto 7" onclick="showImage('bola7.jpg')">
-      <img src="bola8.jpg" alt="Foto 8" onclick="showImage('bola8.jpg')">
-      <img src="bola9.jpg" alt="Foto 9" onclick="showImage('bola9.jpg')">
-      <img src="bola10.jpg" alt="Foto 10" onclick="showImage('bola10.jpg')">
-    </div>
-    <div id="lightbox" onclick="this.style.display='none'">
-      <img id="lightbox-img" src="" alt="Foto Ampliada">
-    </div>
-  </section>
+<!-- FOTOS -->
+<section id="fotos">
+  <h2>Galeria de Fotos</h2>
+  <div class="gallery">
+    <img src="bola1.jpg" alt="Foto 1" onclick="expandImage(this)">
+    <img src="bola2.jpg" alt="Foto 2" onclick="expandImage(this)">
+    <img src="bola3.jpg" alt="Foto 3" onclick="expandImage(this)">
+    <img src="bola4.jpg" alt="Foto 4" onclick="expandImage(this)">
+    <img src="bola5.jpg" alt="Foto 5" onclick="expandImage(this)">
+    <img src="bola6.jpg" alt="Foto 6" onclick="expandImage(this)">
+    <img src="bola7.jpg" alt="Foto 7" onclick="expandImage(this)">
+    <img src="bola8.jpg" alt="Foto 8" onclick="expandImage(this)">
+    <img src="bola9.jpg" alt="Foto 9" onclick="expandImage(this)">
+    <img src="bola10.jpg" alt="Foto 10" onclick="expandImage(this)">
+  </div>
+</section>
 
-  <!-- PROJETO -->
-  <section id="projeto" class="box-verde">
-    <h2>🏆 Festival de Futebol Amador Bolaverdão 2025/2026</h2>
-    <p><strong>Esporte, Cultura e Comunidade em Movimento</strong></p>
-    <h3>🎯 Objeto do Projeto</h3>
-    <p>O Festival Bolaverdão é uma iniciativa esportiva e sociocultural que promove a integração comunitária e o fortalecimento dos vínculos sociais através do futebol. Realizado pelo CTB com apoio via Lei de Incentivo ao Esporte, o evento valoriza atletas e comunidades de Teofilândia (Bahia).</p>
-    <h3>🎯 Objetivos Específicos</h3>
-    <ul>
-      <li>Estimular hábitos saudáveis e convivência social;</li>
-      <li>Valorizar o futebol amador local e seus atletas;</li>
-      <li>Gerar impacto econômico e cultural positivo;</li>
-      <li>Promover igualdade de gênero, cidadania e sustentabilidade;</li>
-      <li>Fortalecer o CTB como modelo de gestão esportiva comunitária.</li>
-    </ul>
-    <p>💬 O Bolaverdão é mais do que um torneio — é um movimento de transformação social e valorização da cultura esportiva baiana.</p>
-  </section>
+<!-- PROJETO -->
+<section id="projeto" class="box-verde">
+  <h2>🏆 Festival de Futebol Amador Bolaverdão 2025/2026</h2>
+  <p><strong>Objeto:</strong> O Festival é uma iniciativa esportiva e sociocultural do Clube dos Tenistas da Bahia (CTB), que promove a integração comunitária e o fortalecimento dos vínculos sociais através do futebol, em Teofilândia (BA), com apoio da Lei de Incentivo ao Esporte.</p>
+  <p><strong>Objetivo Geral:</strong> Promover o Festival de Futebol Amador Bolaverdão 2025/2026, proporcionando um espaço de integração esportiva, lazer e desenvolvimento humano.</p>
+  <p><strong>Objetivos Específicos:</strong> Incentivar a prática esportiva regular, fortalecer o futebol amador local, promover convivência pacífica, resgatar tradições e realizar oficinas temáticas voltadas à cidadania, saúde e sustentabilidade.</p>
+  <p><strong>Justificativa:</strong> O Bolaverdão é um movimento de cidadania e educação, que transforma o esporte em ferramenta de inclusão, fortalecendo a economia local e alinhando-se aos Objetivos de Desenvolvimento Sustentável (ODS) da ONU.</p>
+</section>
 
-  <!-- INSCRIÇÃO -->
-  <section id="inscricao">
-    <h2>Formulário de Inscrição</h2>
-    <form id="inscricaoForm">
-      <label>Nome da Equipe</label>
-      <input type="text" id="nomeEquipe" required>
-      <label>Nome do Responsável</label>
-      <input type="text" id="responsavel" required>
-      <label>CPF do Responsável</label>
-      <input type="text" id="cpf" required placeholder="000.000.000-00">
-      <label>Cidade</label>
-      <input type="text" id="cidade" required>
-      <label><input type="checkbox" id="concorda" required> Concordo com o regulamento e termo de uso da imagem.</label>
-      <button type="submit" class="btn">Enviar Inscrição</button>
-      <div class="pdf-links">
-        <a href="regulamento.pdf" target="_blank">📄 Regulamento</a>
-        <a href="termo.pdf" target="_blank">📜 Termo</a>
-      </div>
-    </form>
-  </section>
+<!-- OFICINAS -->
+<section id="oficinas">
+  <h2>Oficinas Temáticas</h2>
+  <p>As oficinas abordam temas de cidadania, sustentabilidade, igualdade e cultura popular.</p>
+  <ul>
+    <li>🧍‍♂️ Oficina 1 – “Promoção da Saúde e Bem-Estar”</li>
+    <li>🕊️ Oficina 2 – “Prevenção à Violência e Convivência Pacífica”</li>
+    <li>🌱 Oficina 3 – “Preservação Ambiental e Sustentabilidade”</li>
+    <li>⚖️ Oficina 4 – “Igualdade de Gênero no Esporte”</li>
+    <li>🪶 Oficina 5 – “Cultura Popular e História do Futebol na Região”</li>
+  </ul>
+</section>
 
-  <!-- EQUIPE -->
-  <section id="equipe">
-    <h2>Equipe Bolaverdão 2025/2026</h2>
-    <ul>
-      <li>Paulo Carneiro – Presidente CTB</li>
-      <li>Marcos Leão – Presidente Bolaverdão</li>
-      <li>Franklin Oliveira – Coordenador Geral</li>
-      <li>Samir Abdala – Coordenador Técnico</li>
-    </ul>
-  </section>
+<!-- CRONOGRAMA -->
+<section id="cronograma" class="box-verde">
+  <h2>Cronograma</h2>
+  <table border="1" cellspacing="0" cellpadding="8" style="width:100%; border-collapse:collapse; border-color:#1C8C3B;">
+    <tr><th>Data</th><th>Atividade</th><th>Tipo</th><th>Responsável</th><th>Indicadores</th></tr>
+    <tr><td>30/08/2025</td><td>Envio dos ofícios e convites</td><td>Institucional</td><td>Coordenação Geral</td><td>100% equipes notificadas</td></tr>
+    <tr><td>02/09/2025</td><td>Criação das artes dos uniformes</td><td>Comunicação</td><td>Designer CTB</td><td>Artes aprovadas</td></tr>
+    <tr><td>29/11/2025</td><td>Entrega dos uniformes + Oficina 1</td><td>Educacional</td><td>CTB / Prof. Saúde</td><td>≥ 70% participação</td></tr>
+    <tr><td>30/11/2025</td><td>Abertura Oficial do Festival</td><td>Esportivo</td><td>Comunidade</td><td>≥ 10 municípios</td></tr>
+  </table>
+</section>
 
-  <!-- CONTATO -->
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Entre em contato com o CTB para informações, parcerias e imprensa.</p>
-    <p><strong>Email:</strong> contato@ctb-ba.com.br</p>
-    <p><strong>Telefone:</strong> (71) 98530-4903</p>
-  </section>
+<!-- INSCRIÇÃO -->
+<section id="inscricao">
+  <h2>Formulário de Inscrição</h2>
+  <form id="inscricaoForm">
+    <label for="nomeEquipe">Nome da Equipe</label>
+    <input type="text" id="nomeEquipe" name="nomeEquipe" required>
+    <label for="responsavel">Nome do Responsável</label>
+    <input type="text" id="responsavel" name="responsavel" required>
+    <label for="cpf">CPF do Responsável</label>
+    <input type="text" id="cpf" name="cpf" required>
+    <label for="cidade">Cidade</label>
+    <input type="text" id="cidade" name="cidade" required>
+    <p><input type="checkbox" required> Concordo com o regulamento e termo de uso da imagem.</p>
+    <button type="submit">Enviar Inscrição</button>
+  </form>
+</section>
 
-  <!-- RODAPÉ -->
-  <footer>
+<!-- EQUIPE -->
+<section id="equipe" class="box-verde">
+  <h2>Equipe Bolaverdão 2025/2026</h2>
+  <ul>
+    <li>Paulo Carneiro – Presidente CTB</li>
+    <li>Marcos Leão – Presidente Bolaverdão</li>
+    <li>Franklin Oliveira – Coordenador Geral</li>
+    <li>Samir Abdala – Coordenador Técnico</li>
+  </ul>
+</section>
+
+<!-- PATROCINADORES -->
+<section id="patrocinadores" class="box-verde">
+  <h2>Patrocinadores e Apoiadores</h2>
+  <p>O Festival Bolaverdão é uma realização do <strong>Clube dos Tenistas da Bahia</strong> com apoio de empresas e do Ministério do Esporte.</p>
+  <div style="text-align:center;">
+    <img src="patrocinadores.png" alt="Patrocinadores" style="max-width:90%; border:2px solid #1C8C3B; border-radius:10px;">
+  </div>
+</section>
+
+<!-- RODAPÉ -->
+<footer>
+  <div class="footer-info">
     <div>
-      <p>CLUBE DOS TENISTAS DA BAHIA<br>CNPJ 23.146.328/0001-16</p>
+      <p><strong>Clube dos Tenistas da Bahia</strong></p>
+      <p>CNPJ 23.146.328/0001-16</p>
+      <p>Marcos Leão – (75) 99881-4111</p>
+      <p>Paulo Carneiro – (71) 98530-4903</p>
     </div>
-    <div>
-      <p>Marcos Leão - (75) 99881-4111<br>Paulo Carneiro - (71) 98530-4903</p>
-    </div>
-    <div>
-      <img src="ctb.png" alt="CTB Rodapé" height="50">
-    </div>
-  </footer>
+    <img src="ctb.png" alt="CTB">
+  </div>
+</footer>
 
-  <!-- SCRIPT DE ENVIO -->
-  <script>
-    function showImage(src) {
-      const lightbox = document.getElementById("lightbox");
-      const img = document.getElementById("lightbox-img");
-      img.src = src;
-      lightbox.style.display = "flex";
-    }
+<script>
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzCwTAa-TM8wAg1nga8IqSpEiSzJy-LHSHX3hI5UhOxoE1re-yRh2QWeKGDrgv5OILU6g/exec";
 
-    document.getElementById("inscricaoForm").addEventListener("submit", async function(e) {
-      e.preventDefault();
+document.getElementById("inscricaoForm").addEventListener("submit", async function(e) {
+  e.preventDefault();
 
-      const data = {
-        nomeEquipe: document.getElementById("nomeEquipe").value.trim(),
-        responsavel: document.getElementById("responsavel").value.trim(),
-        cpf: document.getElementById("cpf").value.trim(),
-        cidade: document.getElementById("cidade").value.trim(),
-        concorda: document.getElementById("concorda").checked
-      };
+  const dados = {
+    nomeEquipe: document.getElementById("nomeEquipe").value,
+    responsavel: document.getElementById("responsavel").value,
+    cpf: document.getElementById("cpf").value,
+    cidade: document.getElementById("cidade").value
+  };
 
-      try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbyZ7jDGs-CYDczWNnRi-2deksfuHRAmOt9E8y_8DIsdOzP_q-y1-fIx68GMOK6LJmuCkQ/exec", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" }
-        });
-
-        const result = await response.json();
-        if (result.status === "success") {
-          alert("✅ Inscrição enviada com sucesso! Obrigado por participar do Bolaverdão.");
-          document.getElementById("inscricaoForm").reset();
-        } else {
-          alert("⚠️ Erro: " + result.message);
-        }
-      } catch (error) {
-        alert("❌ Erro de conexão com o servidor. Tente novamente mais tarde.");
-        console.error(error);
-      }
+  try {
+    const resposta = await fetch(SCRIPT_URL, {
+      method: "POST",
+      mode: "cors",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(dados)
     });
-  </script>
+    const resultado = await resposta.json();
+
+    if (resultado.status === "success") {
+      alert("✅ " + resultado.message);
+      document.getElementById("inscricaoForm").reset();
+    } else {
+      alert("⚠️ " + resultado.message);
+    }
+  } catch (erro) {
+    alert("❌ Erro de conexão com o servidor. Tente novamente mais tarde.");
+  }
+});
+
+function expandImage(img) {
+  const win = window.open("", "_blank");
+  win.document.write(`<img src="${img.src}" style="width:100%;height:auto;">`);
+}
+</script>
+
 </body>
 </html>
