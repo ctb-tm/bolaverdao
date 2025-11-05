@@ -2,43 +2,48 @@
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Festival de Futebol Amador Bolaverdão</title>
 
 <style>
+/* --- GLOBAL --- */
 :root {
   --verde: #1C8C3B;
   --verde-claro: #43A047;
-  --verde-suave: rgba(28, 140, 59, 0.05);
   --fundo: #f9fafb;
-  --sombra: rgba(0, 0, 0, 0.08);
 }
-
 body {
   margin: 0;
   font-family: "Poppins", Arial, sans-serif;
   background: var(--fundo);
   color: #222;
+  scroll-behavior: smooth;
 }
-
-h1, h2, h3 { color: var(--verde); }
-section { padding: 60px 8%; }
+h1,h2,h3 { color: var(--verde); margin-top: 0.4em; }
 a { color: var(--verde); text-decoration: none; }
 a:hover { text-decoration: underline; }
-
-header {
-  background: var(--verde-suave);
-  padding: 20px;
-  text-align: center;
-  color: var(--verde);
+button {
+  background: var(--verde);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 22px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
 }
-header h1 {
-  font-size: 1.8em;
+button:hover { background: var(--verde-claro); }
+section { padding: 60px 10%; }
+
+/* --- HEADER / NAV --- */
+header {
+  background: linear-gradient(90deg, var(--verde), var(--verde-claro));
+  color: #fff;
+  padding: 20px 10px;
+  text-align: center;
   font-weight: 700;
-  color: var(--verde);
 }
 header img { height: 60px; }
-
 nav {
   background: var(--verde);
   display: flex;
@@ -49,18 +54,20 @@ nav a {
   padding: 14px 20px;
   color: white;
   font-weight: 600;
+  transition: background 0.3s;
 }
 nav a:hover { background: var(--verde-claro); }
 
+/* --- CONTAINERS --- */
 .box-verde {
   background: #e8f5e9;
-  border: 1px solid var(--verde);
   border-radius: 16px;
+  border: 1px solid var(--verde);
   padding: 30px;
-  box-shadow: 0 2px 10px var(--sombra);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
 }
 
-/* Galeria */
+/* --- GALERIA --- */
 .gallery {
   display: flex;
   flex-wrap: wrap;
@@ -74,26 +81,26 @@ nav a:hover { background: var(--verde-claro); }
   border-radius: 8px;
   cursor: pointer;
   border: 2px solid var(--verde);
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 .gallery img:hover {
   transform: scale(1.04);
-  transition: 0.2s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
 
-/* Modal */
+/* --- MODAL --- */
 #imgModal {
   display: none;
   position: fixed;
   z-index: 1000;
   left: 0; top: 0;
   width: 100%; height: 100%;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0,0,0,0.9);
   justify-content: center;
   align-items: center;
 }
 #imgModal img {
-  max-width: 90%;
-  max-height: 80%;
+  max-width: 90%; max-height: 80%;
   border-radius: 8px;
 }
 #imgModal span {
@@ -104,7 +111,7 @@ nav a:hover { background: var(--verde-claro); }
   cursor: pointer;
 }
 
-/* Formulário */
+/* --- FORM --- */
 form {
   max-width: 480px;
   margin: 0 auto;
@@ -112,30 +119,30 @@ form {
   border: 2px solid var(--verde);
   border-radius: 12px;
   padding: 30px;
-  box-shadow: 0 4px 12px var(--sombra);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
 }
 label { font-weight: 600; display: block; margin-top: 15px; }
 input {
-  width: 100%;
-  padding: 10px;
-  margin-top: 6px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+  width: 100%; padding: 10px; margin-top: 6px;
+  border-radius: 6px; border: 1px solid #ccc;
   font-size: 15px;
 }
-button {
-  background: var(--verde);
-  color: #fff;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 18px;
-  margin-top: 10px;
-  font-weight: 600;
-  cursor: pointer;
-}
-button:hover { background: var(--verde-claro); }
+input:focus { outline: 2px solid var(--verde); }
+form p { font-size: 14px; margin-top: 12px; }
 
-/* Rodapé */
+/* --- TABELA --- */
+table {
+  width: 100%; border-collapse: collapse; margin-top: 20px;
+}
+table th {
+  background: var(--verde); color: white; padding: 10px;
+}
+table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+/* --- FOOTER --- */
 footer {
   background: var(--verde);
   color: white;
@@ -145,21 +152,7 @@ footer {
 }
 footer img { height: 60px; margin-top: 10px; }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 20px;
-}
-th {
-  background: var(--verde);
-  color: white;
-  padding: 10px;
-}
-td {
-  border: 1px solid #ccc;
-  padding: 8px;
-}
-
+/* --- RESPONSIVO --- */
 @media (max-width: 768px) {
   section { padding: 40px 6%; }
   .gallery img { width: 45%; height: auto; }
@@ -187,13 +180,16 @@ td {
   <a href="#patrocinadores">Patrocinadores</a>
 </nav>
 
+<!-- INÍCIO -->
 <section id="inicio">
   <h2>Esporte, Cultura e Comunidade em Movimento</h2>
   <video controls poster="bolaverdao.png" style="width:100%;max-width:800px;border-radius:12px;border:2px solid var(--verde);display:block;margin:auto;">
     <source src="video.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeos.
   </video>
 </section>
 
+<!-- FOTOS -->
 <section id="fotos">
   <h2>Galeria de Fotos</h2>
   <div class="gallery">
@@ -215,49 +211,51 @@ td {
   <img id="modalImg" src="">
 </div>
 
+<!-- PROJETO -->
 <section id="projeto" class="box-verde">
   <h2>🏆 Festival de Futebol Amador Bolaverdão 2025/2026</h2>
-  <p>O Festival de Futebol Amador Bolaverdão é uma iniciativa esportiva e sociocultural...</p>
+  <p><strong>Objeto:</strong> O Festival Bolaverdão é uma iniciativa esportiva e sociocultural que visa promover a integração comunitária e o fortalecimento dos vínculos sociais através do futebol, em Teofilândia (Bahia). Realização do <strong>Clube dos Tenistas da Bahia (CTB)</strong> com incentivo via <strong>Lei nº 11.438/2006</strong>.</p>
   <h3>🎯 Objetivo Geral</h3>
-  <p>Promover o Festival de Futebol Amador Bolaverdão 2025/2026...</p>
+  <p>Promover o Festival, proporcionando um espaço de integração esportiva, lazer e desenvolvimento humano, com ênfase na educação, inclusão social e sustentabilidade.</p>
   <h3>🎯 Objetivos Específicos</h3>
   <ul>
-    <li>Incentivar a prática esportiva regular entre jovens e adultos...</li>
-    <li>Fortalecer o futebol amador local...</li>
-    <li>Promover convivência pacífica e respeito mútuo...</li>
-    <li>Resgatar a tradição histórica do Bolaverdão...</li>
-    <li>Realizar oficinas temáticas voltadas à cidadania e saúde...</li>
+    <li>Incentivar a prática esportiva regular e hábitos saudáveis.</li>
+    <li>Fortalecer o futebol amador local e valorizar atletas e equipes comunitárias.</li>
+    <li>Promover convivência pacífica e ética.</li>
+    <li>Resgatar a tradição do Bolaverdão como símbolo cultural da região.</li>
+    <li>Realizar oficinas temáticas voltadas à cidadania, saúde e igualdade.</li>
+    <li>Estimular formação social de jovens Sub-17.</li>
   </ul>
   <h3>💬 Justificativa</h3>
-  <p>Desde sua criação, o Bolaverdão consolidou-se como um dos maiores festivais...</p>
+  <p>O Bolaverdão é um dos maiores festivais amadores da Bahia, reunindo comunidades, escolas e atletas. O evento é instrumento de inclusão e cidadania, alinhado aos ODS da ONU: Saúde e Bem-Estar, Educação de Qualidade, Igualdade de Gênero e Paz, Justiça e Instituições Eficazes.</p>
 </section>
 
-<section id="oficinas" class="box-verde">
-  <h2>Conteúdo das Oficinas Temáticas</h2>
-  <p>🧍‍♂️ <b>Oficina 1 – Promoção da Saúde e Bem-Estar</b><br>
-  Cuidados com o corpo, alimentação e saúde mental.</p>
-  <p>🕊️ <b>Oficina 2 – Prevenção à Violência e Convivência Pacífica</b><br>
-  Controle emocional, respeito e mediação comunitária.</p>
-  <p>🌱 <b>Oficina 3 – Preservação Ambiental e Sustentabilidade</b><br>
-  Limpeza coletiva e criação do “Time Sustentável”.</p>
-  <p>⚖️ <b>Oficina 4 – Igualdade de Gênero no Esporte</b><br>
-  Prevenção ao assédio e valorização feminina.</p>
-  <p>🪶 <b>Oficina 5 – Cultura Popular e História do Futebol na Região</b><br>
-  Painel com ex-jogadores e mural digital “Memórias do Bolaverdão”.</p>
+<!-- OFICINAS -->
+<section id="oficinas">
+  <h2>Oficinas Temáticas</h2>
+  <div class="box-verde">
+    <p>🧍‍♂️ <b>Promoção da Saúde e Bem-Estar</b>: Cuidados com o corpo, alimentação, alongamento e equilíbrio emocional.</p>
+    <p>🕊️ <b>Prevenção à Violência e Convivência Pacífica</b>: Esporte como ferramenta de paz, mediação comunitária e respeito.</p>
+    <p>🌱 <b>Preservação Ambiental e Sustentabilidade</b>: Limpeza do campo, redução de lixo e “Time Sustentável”.</p>
+    <p>⚖️ <b>Igualdade de Gênero no Esporte</b>: Prevenção ao assédio e valorização da mulher.</p>
+    <p>🪶 <b>Cultura Popular e História do Futebol</b>: Registro histórico e documentário digital “Memórias do Bolaverdão”.</p>
+  </div>
 </section>
 
+<!-- CRONOGRAMA -->
 <section id="cronograma" class="box-verde">
   <h2>Cronograma</h2>
   <table>
-    <tr><th>Data</th><th>Atividade</th><th>Tipo</th><th>Público / Responsável</th><th>Indicadores</th></tr>
-    <tr><td>30/08/2025</td><td>Envio dos ofícios e convite às equipes</td><td>Institucional</td><td>Coordenação Geral</td><td>100% equipes notificadas</td></tr>
-    <tr><td>02/09/2025</td><td>Criação das artes dos uniformes</td><td>Comunicação</td><td>Designer CTB</td><td>Artes aprovadas</td></tr>
-    <tr><td>06/09/2025</td><td>Reunião da Comissão Organizadora</td><td>Técnica</td><td>Coordenação CTB</td><td>Ata registrada</td></tr>
-    <tr><td>04/01/2026</td><td>Final do Bolaverdão</td><td>Esportivo</td><td>Comissão Técnica</td><td>Realização conforme regulamento</td></tr>
-    <tr><td>09–15/02/2026</td><td>Encerramento e Avaliação Final</td><td>Técnica / Gestão</td><td>Coordenação CTB</td><td>Relatório entregue</td></tr>
+    <tr><th>Data</th><th>Atividade</th><th>Tipo</th><th>Responsável</th><th>Indicadores</th></tr>
+    <tr><td>30/08/2025</td><td>Convite às equipes</td><td>Institucional</td><td>Coordenação</td><td>100% notificadas</td></tr>
+    <tr><td>29/11/2025</td><td>Entrega dos uniformes + Oficina 1</td><td>Educacional</td><td>CTB</td><td>≥70% participação</td></tr>
+    <tr><td>30/11/2025</td><td>Abertura Oficial do Festival</td><td>Esportivo</td><td>Comunidade</td><td>≥10 municípios</td></tr>
+    <tr><td>Dez/2025</td><td>Jogos e Rodadas</td><td>Esportivo</td><td>Arbitragem</td><td>100% concluídas</td></tr>
+    <tr><td>04/01/2026</td><td>Final do Bolaverdão</td><td>Esportivo</td><td>Comissão Técnica</td><td>Conforme regulamento</td></tr>
   </table>
 </section>
 
+<!-- INSCRIÇÃO -->
 <section id="inscricao">
   <h2>Formulário de Inscrição</h2>
   <form id="inscricaoForm">
@@ -278,6 +276,7 @@ td {
   </form>
 </section>
 
+<!-- EQUIPE -->
 <section id="equipe" class="box-verde">
   <h2>Equipe Bolaverdão 2025/2026</h2>
   <ul>
@@ -288,23 +287,25 @@ td {
   </ul>
 </section>
 
+<!-- PATROCINADORES -->
 <section id="patrocinadores" class="box-verde">
   <h2>Patrocinadores e Apoiadores</h2>
+  <p>O Festival Bolaverdão é uma realização do <b>Clube dos Tenistas da Bahia (CTB)</b> com apoio do <b>Ministério do Esporte</b>, <b>Equinox Gold</b> e <b>Banco Itaú</b>, via Lei de Incentivo ao Esporte.</p>
   <div style="text-align:center;">
-    <img src="patrocinador.png" alt="Patrocinadores" style="max-width:90%;border:2px solid var(--verde);border-radius:12px;">
+    <img src="patrocinadores.png" alt="Patrocinadores" style="max-width:90%;border:2px solid var(--verde);border-radius:12px;">
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <p><b>Clube dos Tenistas da Bahia</b><br>
   CNPJ 23.146.328/0001-16<br>
-  Marcos Leão - (75) 99881-4111<br>
-  Paulo Carneiro - (71) 98530-4903</p>
-  <img src="ctb.png" alt="CTB Logo">
+  Marcos Leão – (75) 99881-4111  |  Paulo Carneiro – (71) 98530-4903</p>
+  <img src="ctb.png" alt="CTB Logo" />
 </footer>
 
 <script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbx9aNVW1lP6-oI6znSFPjANLxBYBjSLW2goTTbKLNW-sjY6H-qItZv8VlmOBDq6db6Eow/exec";
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbztzpzpECsHIQDzIhCL-SOLXWbFSSMryZoT-ag7n4mLHbPjDSt5Ht11jSPEi7QLkbdbLg/exec";
 
 document.getElementById("inscricaoForm").addEventListener("submit", async e => {
   e.preventDefault();
@@ -325,10 +326,11 @@ document.getElementById("inscricaoForm").addEventListener("submit", async e => {
     alert(json.status === "success" ? "✅ " + json.message : "⚠️ " + json.message);
     document.getElementById("inscricaoForm").reset();
   } catch (err) {
-    alert("❌ Erro de conexão com o servidor. Tente novamente.");
+    alert("❌ Erro de conexão com o servidor.");
   }
 });
 
+/* MODAL */
 function openModal(img) {
   document.getElementById("imgModal").style.display = "flex";
   document.getElementById("modalImg").src = img.src;
