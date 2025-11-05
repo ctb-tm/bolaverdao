@@ -6,7 +6,7 @@
   <title>Festival de Futebol Amador Bolaverdão</title>
   <style>
     body { font-family: Arial, sans-serif; margin: 0; background-color: #fff; color: #333; }
-    header { background: linear-gradient(90deg, #1C8C3B, #43A047); color: white; padding: 20px 0; text-align: center; font-size: 18px; font-weight: bold; }
+    header { background: linear-gradient(90deg, #1C8C3B, #43A047); color: white; padding: 20px 0; text-align: center; font-weight: bold; }
     nav { background-color: #1C8C3B; display: flex; justify-content: center; flex-wrap: wrap; }
     nav a { color: white; text-decoration: none; padding: 14px 20px; font-weight: bold; }
     nav a:hover { background-color: #43A047; }
@@ -25,6 +25,11 @@
     .footer-info { display: flex; justify-content: space-around; align-items: center; flex-wrap: wrap; gap: 10px; }
     .footer-info img { width: 100px; }
     iframe, video { width: 100%; max-width: 800px; border: 2px solid #1C8C3B; border-radius: 12px; display: block; margin: 0 auto; }
+
+    /* Modal de imagem */
+    #imgModal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0,0,0,0.8); justify-content: center; align-items: center; }
+    #imgModal img { max-width: 90%; max-height: 85%; border-radius: 8px; }
+    #imgModal span { position: absolute; top: 20px; right: 40px; color: white; font-size: 30px; font-weight: bold; cursor: pointer; }
   </style>
 </head>
 <body>
@@ -61,62 +66,53 @@
 <section id="fotos">
   <h2>Galeria de Fotos</h2>
   <div class="gallery">
-    <img src="bola1.jpg" alt="Foto 1" onclick="expandImage(this)">
-    <img src="bola2.jpg" alt="Foto 2" onclick="expandImage(this)">
-    <img src="bola3.jpg" alt="Foto 3" onclick="expandImage(this)">
-    <img src="bola4.jpg" alt="Foto 4" onclick="expandImage(this)">
-    <img src="bola5.jpg" alt="Foto 5" onclick="expandImage(this)">
-    <img src="bola6.jpg" alt="Foto 6" onclick="expandImage(this)">
-    <img src="bola7.jpg" alt="Foto 7" onclick="expandImage(this)">
-    <img src="bola8.jpg" alt="Foto 8" onclick="expandImage(this)">
-    <img src="bola9.jpg" alt="Foto 9" onclick="expandImage(this)">
-    <img src="bola10.jpg" alt="Foto 10" onclick="expandImage(this)">
+    <img src="bola1.jpg" alt="Foto 1" onclick="openModal(this)">
+    <img src="bola2.jpg" alt="Foto 2" onclick="openModal(this)">
+    <img src="bola3.jpg" alt="Foto 3" onclick="openModal(this)">
+    <img src="bola4.jpg" alt="Foto 4" onclick="openModal(this)">
+    <img src="bola5.jpg" alt="Foto 5" onclick="openModal(this)">
+    <img src="bola6.jpg" alt="Foto 6" onclick="openModal(this)">
+    <img src="bola7.jpg" alt="Foto 7" onclick="openModal(this)">
+    <img src="bola8.jpg" alt="Foto 8" onclick="openModal(this)">
+    <img src="bola9.jpg" alt="Foto 9" onclick="openModal(this)">
+    <img src="bola10.jpg" alt="Foto 10" onclick="openModal(this)">
   </div>
 </section>
+
+<!-- MODAL -->
+<div id="imgModal">
+  <span onclick="closeModal()">✖</span>
+  <img id="modalImg" src="">
+</div>
 
 <!-- PROJETO -->
 <section id="projeto" class="box-verde">
   <h2>🏆 Festival de Futebol Amador Bolaverdão 2025/2026</h2>
-  <h3>🎯 Objeto do Projeto</h3>
-  <p>O Festival de Futebol Amador Bolaverdão é uma iniciativa esportiva e sociocultural que visa promover a integração comunitária e o fortalecimento dos vínculos sociais através do futebol, em Teofilândia (Bahia). É uma realização do <strong>Clube dos Tenistas da Bahia (CTB)</strong>, com apoio de empresas parceiras e incentivo via Lei de Incentivo ao Esporte (Lei nº 11.438/2006).</p>
-  <h3>🎯 Objetivo Geral</h3>
-  <p>Promover o Festival Bolaverdão 2025/2026, proporcionando um espaço de integração esportiva, lazer e desenvolvimento humano, com ênfase na educação, inclusão social, respeito e sustentabilidade.</p>
-  <h3>🎯 Objetivos Específicos</h3>
-  <ul>
-    <li>Incentivar a prática esportiva regular entre jovens e adultos, promovendo hábitos saudáveis e qualidade de vida.</li>
-    <li>Fortalecer o futebol amador local e valorizar atletas e equipes das comunidades rurais e urbanas.</li>
-    <li>Promover convivência pacífica, ética e solidária entre os participantes.</li>
-    <li>Resgatar a tradição histórica do Bolaverdão como símbolo esportivo e cultural.</li>
-    <li>Realizar oficinas temáticas de cidadania, saúde, sustentabilidade e igualdade de gênero.</li>
-    <li>Estimular a formação esportiva e social de jovens Sub-17.</li>
-    <li>Gerar impacto positivo na economia local e no turismo esportivo.</li>
-  </ul>
-  <h3>💬 Justificativa</h3>
-  <p>O Bolaverdão se consolidou como um dos maiores festivais amadores da Bahia, reunindo atletas, comunidades e escolas. Mais que uma competição, é um movimento social e educativo que resgata tradições e transforma o esporte em instrumento de inclusão e cidadania. O projeto contribui para os ODS da ONU — Saúde e Bem-Estar, Educação de Qualidade, Igualdade de Gênero e Paz e Justiça.</p>
+  <p><strong>Objeto:</strong> O Festival Bolaverdão é uma ação esportiva e sociocultural realizada pelo Clube dos Tenistas da Bahia (CTB) com apoio da Lei de Incentivo ao Esporte, promovendo integração, cidadania e sustentabilidade.</p>
+  <p><strong>Objetivos:</strong> Incentivar a prática esportiva, fortalecer o futebol amador, promover convivência pacífica e valorizar a cultura local.</p>
+  <p><strong>Justificativa:</strong> O projeto resgata tradições, promove inclusão social e contribui para os ODS da ONU, sendo um marco para Teofilândia e região.</p>
 </section>
 
 <!-- OFICINAS -->
 <section id="oficinas">
   <h2>Oficinas Temáticas</h2>
   <ul>
-    <li>🧍‍♂️ <strong>Oficina 1:</strong> Promoção da Saúde e Bem-Estar — Cuidados com o corpo, alimentação, respiração e saúde mental.</li>
-    <li>🕊️ <strong>Oficina 2:</strong> Prevenção à Violência e Convivência Pacífica — Esporte como ferramenta de paz e respeito.</li>
-    <li>🌱 <strong>Oficina 3:</strong> Preservação Ambiental e Sustentabilidade — Limpeza coletiva e “Time Sustentável”.</li>
-    <li>⚖️ <strong>Oficina 4:</strong> Igualdade de Gênero no Esporte — Valorização da mulher e combate ao assédio.</li>
-    <li>🪶 <strong>Oficina 5:</strong> Cultura Popular e História do Futebol — Memórias do Bolaverdão e documentário digital.</li>
+    <li>🧍‍♂️ Promoção da Saúde e Bem-Estar</li>
+    <li>🕊️ Prevenção à Violência e Convivência Pacífica</li>
+    <li>🌱 Preservação Ambiental e Sustentabilidade</li>
+    <li>⚖️ Igualdade de Gênero no Esporte</li>
+    <li>🪶 Cultura Popular e História do Futebol</li>
   </ul>
 </section>
 
 <!-- CRONOGRAMA -->
 <section id="cronograma" class="box-verde">
-  <h2>Cronograma</h2>
+  <h2>Cronograma de Atividades</h2>
   <table border="1" cellspacing="0" cellpadding="8" style="width:100%; border-collapse:collapse; border-color:#1C8C3B;">
     <tr><th>Data</th><th>Atividade</th><th>Tipo</th><th>Responsável</th><th>Indicadores</th></tr>
-    <tr><td>30/08/2025</td><td>Envio dos ofícios e convite às equipes</td><td>Institucional</td><td>Coordenação Geral</td><td>100% equipes notificadas</td></tr>
-    <tr><td>02/09/2025</td><td>Criação das artes dos uniformes</td><td>Comunicação</td><td>Designer CTB</td><td>Artes aprovadas</td></tr>
-    <tr><td>29/11/2025</td><td>Entrega dos uniformes + Oficina 1</td><td>Educacional</td><td>CTB / Prof. Saúde</td><td>≥ 70% participação</td></tr>
-    <tr><td>30/11/2025</td><td>Abertura Oficial do Festival</td><td>Esportivo</td><td>Comunidade</td><td>≥ 10 municípios presentes</td></tr>
-    <tr><td>Dez/2025</td><td>Jogos e Rodadas</td><td>Esportivo</td><td>Coord. Técnica</td><td>100% concluídas</td></tr>
+    <tr><td>30/08/2025</td><td>Convite às equipes</td><td>Institucional</td><td>Coordenação</td><td>100% notificadas</td></tr>
+    <tr><td>29/11/2025</td><td>Entrega uniformes + Oficina 1</td><td>Educacional</td><td>CTB</td><td>≥70% participação</td></tr>
+    <tr><td>30/11/2025</td><td>Abertura Oficial</td><td>Esportivo</td><td>CTB</td><td>≥10 municípios</td></tr>
     <tr><td>04/01/2026</td><td>Final do Bolaverdão</td><td>Esportivo</td><td>Comissão Técnica</td><td>Conforme regulamento</td></tr>
   </table>
 </section>
@@ -125,34 +121,27 @@
 <section id="inscricao">
   <h2>Formulário de Inscrição</h2>
   <form id="inscricaoForm">
-    <label for="nomeEquipe">Nome da Equipe</label>
+    <label>Nome da Equipe</label>
     <input type="text" id="nomeEquipe" required>
-    <label for="responsavel">Nome do Responsável</label>
+    <label>Nome do Responsável</label>
     <input type="text" id="responsavel" required>
-    <label for="cpf">CPF do Responsável</label>
+    <label>CPF do Responsável</label>
     <input type="text" id="cpf" required>
-    <label for="cidade">Cidade</label>
+    <label>Cidade</label>
     <input type="text" id="cidade" required>
-    <p><input type="checkbox" required> Concordo com o regulamento e termo de uso da imagem.</p>
+    <p><input type="checkbox" required> Concordo com o regulamento e o termo de uso da imagem.</p>
+    <div style="display:flex;justify-content:center;gap:10px;">
+      <a href="regulamento.pdf" download><button type="button">📄 Regulamento</button></a>
+      <a href="termo.pdf" download><button type="button">📝 Termo</button></a>
+    </div>
     <button type="submit">Enviar Inscrição</button>
   </form>
-</section>
-
-<!-- EQUIPE -->
-<section id="equipe" class="box-verde">
-  <h2>Equipe Bolaverdão 2025/2026</h2>
-  <ul>
-    <li>Paulo Carneiro – Presidente CTB</li>
-    <li>Marcos Leão – Presidente Bolaverdão</li>
-    <li>Franklin Oliveira – Coordenador Geral</li>
-    <li>Samir Abdala – Coordenador Técnico</li>
-  </ul>
 </section>
 
 <!-- PATROCINADORES -->
 <section id="patrocinadores" class="box-verde">
   <h2>Patrocinadores e Apoiadores</h2>
-  <p>O Festival Bolaverdão é uma realização do <strong>Clube dos Tenistas da Bahia (CTB)</strong> com apoio do <strong>Ministério do Esporte</strong>, <strong>Equinox Gold</strong> e <strong>Banco Itaú</strong>, por meio da Lei de Incentivo ao Esporte (Lei nº 11.438/2006).</p>
+  <p>O Festival Bolaverdão é uma realização do Clube dos Tenistas da Bahia (CTB) com apoio do Ministério do Esporte, Equinox Gold e Banco Itaú, via Lei de Incentivo ao Esporte.</p>
   <div style="text-align:center;">
     <img src="patrocinadores.png" alt="Patrocinadores" style="max-width:90%; border:2px solid #1C8C3B; border-radius:10px;">
   </div>
@@ -174,39 +163,36 @@
 <script>
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzCwTAa-TM8wAg1nga8IqSpEiSzJy-LHSHX3hI5UhOxoE1re-yRh2QWeKGDrgv5OILU6g/exec";
 
-document.getElementById("inscricaoForm").addEventListener("submit", async function(e) {
+document.getElementById("inscricaoForm").addEventListener("submit", async (e) => {
   e.preventDefault();
-
   const dados = {
     nomeEquipe: document.getElementById("nomeEquipe").value,
     responsavel: document.getElementById("responsavel").value,
     cpf: document.getElementById("cpf").value,
     cidade: document.getElementById("cidade").value
   };
-
   try {
-    const resposta = await fetch(SCRIPT_URL, {
+    const resp = await fetch(SCRIPT_URL, {
       method: "POST",
       mode: "cors",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(dados)
     });
-    const resultado = await resposta.json();
-
-    if (resultado.status === "success") {
-      alert("✅ " + resultado.message);
-      document.getElementById("inscricaoForm").reset();
-    } else {
-      alert("⚠️ " + resultado.message);
-    }
-  } catch (erro) {
-    alert("❌ Erro de conexão com o servidor. Tente novamente mais tarde.");
+    const json = await resp.json();
+    alert(json.status === "success" ? "✅ " + json.message : "⚠️ " + json.message);
+    document.getElementById("inscricaoForm").reset();
+  } catch {
+    alert("❌ Erro de conexão com o servidor. Tente novamente.");
   }
 });
 
-function expandImage(img) {
-  const win = window.open("", "_blank");
-  win.document.write(`<img src="${img.src}" style="width:100%;height:auto;">`);
+// MODAL
+function openModal(img) {
+  document.getElementById("imgModal").style.display = "flex";
+  document.getElementById("modalImg").src = img.src;
+}
+function closeModal() {
+  document.getElementById("imgModal").style.display = "none";
 }
 </script>
 
