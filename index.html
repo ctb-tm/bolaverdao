@@ -8,7 +8,7 @@
   <style>
     body { font-family: 'Montserrat', sans-serif; margin: 0; background: #fff; color: #333; }
     header { display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 4px solid #1C8C3B; padding: 10px 40px; }
-    header img { height: 60px; }
+    header img { height: 60px; object-fit: contain; }
     header h1 { color: #1C8C3B; font-weight: 700; font-size: 16pt; text-align: right; line-height: 1.2; }
     nav { background: #1C8C3B; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 10; }
     nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: 600; }
@@ -16,8 +16,9 @@
     .video-container { display: flex; justify-content: center; }
     video { width: 100%; max-width: 900px; border: 4px solid #1C8C3B; border-radius: 8px; }
     .carousel { display: flex; overflow-x: auto; gap: 10px; scroll-behavior: smooth; }
-    .carousel img { height: 200px; border-radius: 8px; }
-    .box-verde { background: linear-gradient(180deg, rgba(28,140,59,0.2) 0%, rgba(255,255,255,1) 100%); padding: 30px; border-radius: 12px; border: 2px solid #1C8C3B; }
+    .carousel img { height: 200px; border-radius: 8px; border: 2px solid #1C8C3B; }
+    .box-verde { background: linear-gradient(180deg, rgba(28,140,59,0.1) 0%, rgba(255,255,255,1) 100%); padding: 30px; border-radius: 12px; border: 2px solid #1C8C3B; }
+    h2 { color: #1C8C3B; border-left: 5px solid #1C8C3B; padding-left: 10px; }
     form { background: #fff; border: 2px solid #1C8C3B; border-radius: 10px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
     label { font-weight: 600; display: block; margin-top: 15px; }
     input[type=text], input[type=email] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-top: 5px; }
@@ -35,8 +36,8 @@
 </head>
 <body>
   <header>
-    <img src="assets/ctb.png" alt="CTB">
-    <img src="assets/bolaverdao.png" alt="Bolaverdão">
+    <img src="./assets/ctb.png" alt="Logo CTB" onerror="this.src='https://via.placeholder.com/120x60?text=CTB';">
+    <img src="./assets/bolaverdao.png" alt="Logo Bolaverdão" onerror="this.src='https://via.placeholder.com/120x60?text=BOLAVERDAO';">
     <h1>FESTIVAL DE FUTEBOL AMADOR<br>BOLAVERDÃO</h1>
   </header>
 
@@ -51,110 +52,51 @@
     <a href="#contato">Contato</a>
   </nav>
 
-  <!-- INÍCIO -->
   <section id="inicio">
     <h2>Esporte, Cultura e Comunidade em Movimento</h2>
     <div class="video-container">
-      <video controls poster="assets/bola1.jpg">
-        <source src="assets/video.mp4" type="video/mp4">
+      <video controls poster="./assets/bola1.jpg">
+        <source src="./assets/video.mp4" type="video/mp4">
         Seu navegador não suporta o vídeo.
       </video>
     </div>
   </section>
 
-  <!-- FOTOS -->
   <section id="fotos">
     <h2>Galeria de Fotos</h2>
     <div class="carousel">
-      <img src="assets/bola1.jpg" alt="Foto 1">
-      <img src="assets/bola2.jpg" alt="Foto 2">
-      <img src="assets/bola3.jpg" alt="Foto 3">
-      <img src="assets/bola4.jpg" alt="Foto 4">
-      <img src="assets/bola5.jpg" alt="Foto 5">
-      <img src="assets/bola6.jpg" alt="Foto 6">
-      <img src="assets/bola7.jpg" alt="Foto 7">
-      <img src="assets/bola8.jpg" alt="Foto 8">
-      <img src="assets/bola9.jpg" alt="Foto 9">
-      <img src="assets/bola10.jpg" alt="Foto 10">
+      <img src="./assets/bola1.jpg" alt="Foto 1">
+      <img src="./assets/bola2.jpg" alt="Foto 2">
+      <img src="./assets/bola3.jpg" alt="Foto 3">
+      <img src="./assets/bola4.jpg" alt="Foto 4">
+      <img src="./assets/bola5.jpg" alt="Foto 5">
+      <img src="./assets/bola6.jpg" alt="Foto 6">
+      <img src="./assets/bola7.jpg" alt="Foto 7">
+      <img src="./assets/bola8.jpg" alt="Foto 8">
+      <img src="./assets/bola9.jpg" alt="Foto 9">
+      <img src="./assets/bola10.jpg" alt="Foto 10">
     </div>
   </section>
 
-  <!-- PROJETO -->
   <section id="projeto" class="box-verde">
     <h2>🏆 Festival de Futebol Amador Bolaverdão 2025/2026</h2>
     <p><strong>Esporte, Cultura e Comunidade em Movimento</strong></p>
-    <p>O Festival Bolaverdão é uma iniciativa esportiva e sociocultural que promove integração comunitária e fortalecimento dos vínculos sociais por meio do futebol amador em Teofilândia (Bahia). Realização do Clube dos Tenistas da Bahia (CTB) com incentivo da Lei nº 11.438/2006.</p>
-  </section>
-
-  <!-- OFICINAS -->
-  <section id="oficinas">
-    <h2>Conteúdo das Oficinas Temáticas</h2>
-    <p>🧍‍♂️ <strong>Oficina 1 – Promoção da Saúde e Bem-Estar:</strong> Cuidados com o corpo, alimentação, saúde mental e equilíbrio emocional.</p>
-    <p>🕊️ <strong>Oficina 2 – Prevenção à Violência e Convivência Pacífica:</strong> Esporte como ferramenta de paz e controle emocional.</p>
-    <p>🌱 <strong>Oficina 3 – Preservação Ambiental e Sustentabilidade:</strong> Redução de lixo, limpeza do campo e Time Sustentável.</p>
-    <p>⚖️ <strong>Oficina 4 – Igualdade de Gênero no Esporte:</strong> Prevenção ao assédio, campanha “Esporte é de Todos”.</p>
-    <p>🪶 <strong>Oficina 5 – Cultura Popular e História do Futebol:</strong> Memórias do futebol amador, mural e documentário digital.</p>
-  </section>
-
-  <!-- CRONOGRAMA -->
-  <section id="cronograma">
-    <h2>Cronograma do Festival</h2>
-    <table>
-      <tr><th>Data</th><th>Atividade</th><th>Tipo</th><th>Público / Responsável</th><th>Indicadores</th></tr>
-      <tr><td>30/08/2025</td><td>Envio dos ofícios e convites</td><td>Institucional</td><td>Coordenação Geral</td><td>100% equipes notificadas</td></tr>
-      <tr><td>02/09/2025</td><td>Criação das artes dos uniformes</td><td>Comunicação</td><td>Designer CTB</td><td>Artes aprovadas</td></tr>
-      <tr><td>06/09/2025</td><td>Reunião da Comissão Organizadora</td><td>Técnica</td><td>Coordenação CTB</td><td>Ata registrada</td></tr>
-      <tr><td>13–27/09/2025</td><td>Inscrição e reunião das musas</td><td>Cultural / Social</td><td>Coordenação Cultural</td><td>100% equipes representadas</td></tr>
-      <tr><td>29/11/2025</td><td>Entrega dos uniformes + Oficina 1</td><td>Educacional</td><td>CTB / Prof. Saúde</td><td>≥ 70% participação</td></tr>
-      <tr><td>30/11/2025</td><td>Abertura Oficial</td><td>Esportivo / Social</td><td>Comunidade</td><td>≥ 10 municípios</td></tr>
-      <tr><td>04/01/2026</td><td>Final do Bolaverdão</td><td>Esportivo</td><td>Comissão Técnica</td><td>Realização conforme regulamento</td></tr>
-    </table>
-  </section>
-
-  <!-- INSCRIÇÃO -->
-  <section id="inscricao">
-    <h2>Formulário de Inscrição</h2>
-    <form id="inscricaoForm">
-      <label>Nome da Equipe</label>
-      <input type="text" id="nomeEquipe" required>
-
-      <label>Nome do Responsável</label>
-      <input type="text" id="responsavel" required>
-
-      <label>CPF do Responsável</label>
-      <input type="text" id="cpf" required placeholder="000.000.000-00">
-
-      <label>Cidade</label>
-      <input type="text" id="cidade" required>
-
-      <label><input type="checkbox" id="concorda" required> Concordo com o regulamento e termo de uso da imagem.</label>
-
-      <button type="submit" class="btn">Enviar Inscrição</button>
-
-      <div class="pdf-links">
-        <a href="assets/regulamento.pdf" target="_blank">📄 Regulamento</a>
-        <a href="assets/termo.pdf" target="_blank">📜 Termo</a>
-      </div>
-    </form>
-  </section>
-
-  <!-- EQUIPE -->
-  <section id="equipe">
-    <h2>Equipe Bolaverdão 2025/2026</h2>
+    <h3>🎯 Objeto do Projeto</h3>
+    <p>O Festival Bolaverdão é uma ação de esporte participativo, educativa e social que integra jovens, atletas e comunidades por meio do futebol amador, promovendo bem-estar, cidadania e desenvolvimento humano em Teofilândia (Bahia). É realizado pelo Clube dos Tenistas da Bahia (CTB) com incentivo da Lei de Incentivo ao Esporte.</p>
+    <h3>🥅 Objetivo Geral</h3>
+    <p>Promover o Festival de Futebol Amador Bolaverdão, fomentando o esporte como ferramenta de inclusão social e fortalecimento comunitário.</p>
+    <h3>🎯 Objetivos Específicos</h3>
     <ul>
-      <li>Paulo Carneiro – Presidente CTB</li>
-      <li>Marcos Leão – Presidente Bolaverdão</li>
-      <li>Franklin Oliveira – Coordenador Geral</li>
-      <li>Samir Abdala – Coordenador Técnico</li>
+      <li>Estimular a prática esportiva regular e saudável;</li>
+      <li>Valorizar atletas e equipes do futebol amador local;</li>
+      <li>Promover oficinas sobre cidadania, igualdade e meio ambiente;</li>
+      <li>Gerar impacto positivo em escolas, comunidades e comércio local;</li>
+      <li>Divulgar boas práticas de governança e integridade esportiva.</li>
     </ul>
-  </section>
-
-  <!-- CONTATO -->
-  <section id="contato">
-    <h2>Contato</h2>
-    <p>Entre em contato com o CTB para informações, parcerias e imprensa.</p>
-    <p><strong>Email:</strong> contato@ctb-ba.com.br</p>
-    <p><strong>Telefone:</strong> (71) 98530-4903</p>
+    <h3>💬 Justificativa</h3>
+    <p>O Bolaverdão resgata a tradição do futebol amador e fortalece vínculos sociais e culturais, aproximando gerações e difundindo valores de respeito, ética e convivência pacífica. O evento também estimula o turismo esportivo e o orgulho comunitário, tornando-se referência regional de inclusão e sustentabilidade.</p>
+    <h3>🌎 Impacto e Sustentabilidade</h3>
+    <p>Alinhado aos Objetivos de Desenvolvimento Sustentável (ODS 3, 4, 5, 10 e 16), o projeto contribui para uma sociedade mais saudável, justa e participativa.</p>
   </section>
 
   <!-- RODAPÉ -->
@@ -166,43 +108,8 @@
       <p>Marcos Leão - (75) 99881-4111<br>Paulo Carneiro - (71) 98530-4903</p>
     </div>
     <div>
-      <img src="assets/ctb1.png" alt="CTB1" height="50">
+      <img src="./assets/ctb1.png" alt="Logo CTB Rodapé" height="50" onerror="this.src='https://via.placeholder.com/100x50?text=CTB';">
     </div>
   </footer>
-
-  <script>
-    document.getElementById("inscricaoForm").addEventListener("submit", async function(e) {
-      e.preventDefault();
-
-      const data = {
-        nomeEquipe: document.getElementById("nomeEquipe").value.trim(),
-        responsavel: document.getElementById("responsavel").value.trim(),
-        cpf: document.getElementById("cpf").value.trim(),
-        cidade: document.getElementById("cidade").value.trim(),
-        concorda: document.getElementById("concorda").checked
-      };
-
-      try {
-        const response = await fetch("https://script.google.com/macros/s/AKfycbxvIb_e49zKVXNU8pGIC6qkdVqscJ5REDURAEVe-z2YkcUjTv0yu3Iia6nvsJ7Lwyi4WA/exec", {
-          method: "POST",
-          body: JSON.stringify(data),
-          headers: { "Content-Type": "application/json" }
-        });
-
-        const result = await response.json();
-
-        if (result.status === "success") {
-          alert("✅ Inscrição enviada com sucesso! Obrigado por participar do Bolaverdão.");
-          document.getElementById("inscricaoForm").reset();
-        } else {
-          alert("⚠️ Ocorreu um erro: " + result.message);
-        }
-
-      } catch (error) {
-        alert("❌ Erro de conexão com o servidor. Tente novamente mais tarde.");
-        console.error(error);
-      }
-    });
-  </script>
 </body>
 </html>
