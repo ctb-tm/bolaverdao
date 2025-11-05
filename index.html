@@ -3,122 +3,171 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Inscrição - Festival Bolaverdão 2025/2026</title>
+  <title>Festival de Futebol Amador Bolaverdão 2025/2026 - CTB Bahia</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: 'Montserrat', sans-serif;
-      margin: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #1C8C3B;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 20pt;
-      font-weight: 700;
-    }
-    form {
-      background: white;
-      max-width: 600px;
-      margin: 40px auto;
-      padding: 30px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      border: 2px solid #1C8C3B;
-    }
-    label {
-      font-weight: 600;
-      display: block;
-      margin-top: 15px;
-    }
-    input[type="text"], input[type="email"] {
-      width: 100%;
-      padding: 10px;
-      border-radius: 6px;
-      border: 1px solid #ccc;
-      margin-top: 5px;
-      font-size: 14px;
-    }
-    input[type="checkbox"] {
-      margin-top: 15px;
-    }
-    .btn {
-      background: #1C8C3B;
-      color: white;
-      border: none;
-      padding: 12px 25px;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: 14px;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-    .btn:hover {
-      background: #157431;
-    }
-    .pdf-links {
-      margin-top: 30px;
-      text-align: center;
-    }
-    .pdf-links a {
-      background: #1C8C3B;
-      color: #fff;
-      padding: 10px 20px;
-      border-radius: 6px;
-      text-decoration: none;
-      margin: 0 10px;
-      font-weight: 600;
-    }
-    footer {
-      background: #1C8C3B;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 40px;
-      font-size: 13px;
-    }
+    body { font-family: 'Montserrat', sans-serif; margin: 0; background: #fff; color: #333; }
+    header { display: flex; justify-content: space-between; align-items: center; background: #fff; border-bottom: 4px solid #1C8C3B; padding: 10px 40px; }
+    header img { height: 60px; }
+    header h1 { color: #1C8C3B; font-weight: 700; font-size: 16pt; text-align: right; line-height: 1.2; }
+    nav { background: #1C8C3B; padding: 10px; text-align: center; position: sticky; top: 0; z-index: 10; }
+    nav a { color: #fff; text-decoration: none; margin: 0 15px; font-weight: 600; }
+    section { padding: 40px; max-width: 1000px; margin: auto; }
+    .video-container { display: flex; justify-content: center; }
+    video { width: 100%; max-width: 900px; border: 4px solid #1C8C3B; border-radius: 8px; }
+    .carousel { display: flex; overflow-x: auto; gap: 10px; scroll-behavior: smooth; }
+    .carousel img { height: 200px; border-radius: 8px; }
+    .box-verde { background: linear-gradient(180deg, rgba(28,140,59,0.2) 0%, rgba(255,255,255,1) 100%); padding: 30px; border-radius: 12px; border: 2px solid #1C8C3B; }
+    form { background: #fff; border: 2px solid #1C8C3B; border-radius: 10px; padding: 25px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    label { font-weight: 600; display: block; margin-top: 15px; }
+    input[type=text], input[type=email] { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; margin-top: 5px; }
+    input[type=checkbox] { margin-top: 10px; }
+    .btn { background: #1C8C3B; color: white; border: none; padding: 10px 20px; border-radius: 6px; cursor: pointer; margin-top: 15px; }
+    .btn:hover { background: #157431; }
+    .pdf-links { margin-top: 20px; }
+    .pdf-links a { background: #1C8C3B; color: #fff; padding: 8px 15px; border-radius: 6px; text-decoration: none; margin: 5px; display: inline-block; }
+    table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+    th, td { border: 1px solid #1C8C3B; padding: 8px; text-align: left; }
+    th { background-color: #C7EAC4; }
+    footer { background: #1C8C3B; color: white; text-align: center; padding: 20px; margin-top: 40px; display: flex; flex-wrap: wrap; justify-content: space-around; align-items: center; }
+    footer div { margin: 10px; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Festival de Futebol Amador Bolaverdão<br>Formulário de Inscrição</h1>
+    <img src="assets/ctb.png" alt="CTB">
+    <img src="assets/bolaverdao.png" alt="Bolaverdão">
+    <h1>FESTIVAL DE FUTEBOL AMADOR<br>BOLAVERDÃO</h1>
   </header>
 
-  <form id="inscricaoForm">
-    <label for="nomeEquipe">Nome da Equipe</label>
-    <input type="text" id="nomeEquipe" name="nomeEquipe" required>
+  <nav>
+    <a href="#inicio">Início</a>
+    <a href="#fotos">Fotos</a>
+    <a href="#projeto">Projeto</a>
+    <a href="#oficinas">Oficinas</a>
+    <a href="#cronograma">Cronograma</a>
+    <a href="#inscricao">Inscrição</a>
+    <a href="#equipe">Equipe</a>
+    <a href="#contato">Contato</a>
+  </nav>
 
-    <label for="responsavel">Nome do Responsável</label>
-    <input type="text" id="responsavel" name="responsavel" required>
-
-    <label for="cpf">CPF do Responsável</label>
-    <input type="text" id="cpf" name="cpf" required placeholder="000.000.000-00">
-
-    <label for="cidade">Cidade</label>
-    <input type="text" id="cidade" name="cidade" required>
-
-    <label>
-      <input type="checkbox" id="concorda" name="concorda" required>
-      Ao confirmar o envio, concorda com o regulamento e o termo de uso da imagem.
-    </label>
-
-    <button type="submit" class="btn">Enviar Inscrição</button>
-
-    <div class="pdf-links">
-      <a href="assets/regulamento.pdf" target="_blank">📄 Regulamento</a>
-      <a href="assets/termo.pdf" target="_blank">📜 Termo de Imagem</a>
+  <!-- INÍCIO -->
+  <section id="inicio">
+    <h2>Esporte, Cultura e Comunidade em Movimento</h2>
+    <div class="video-container">
+      <video controls poster="assets/bola1.jpg">
+        <source src="assets/video.mp4" type="video/mp4">
+        Seu navegador não suporta o vídeo.
+      </video>
     </div>
-  </form>
+  </section>
 
+  <!-- FOTOS -->
+  <section id="fotos">
+    <h2>Galeria de Fotos</h2>
+    <div class="carousel">
+      <img src="assets/bola1.jpg" alt="Foto 1">
+      <img src="assets/bola2.jpg" alt="Foto 2">
+      <img src="assets/bola3.jpg" alt="Foto 3">
+      <img src="assets/bola4.jpg" alt="Foto 4">
+      <img src="assets/bola5.jpg" alt="Foto 5">
+      <img src="assets/bola6.jpg" alt="Foto 6">
+      <img src="assets/bola7.jpg" alt="Foto 7">
+      <img src="assets/bola8.jpg" alt="Foto 8">
+      <img src="assets/bola9.jpg" alt="Foto 9">
+      <img src="assets/bola10.jpg" alt="Foto 10">
+    </div>
+  </section>
+
+  <!-- PROJETO -->
+  <section id="projeto" class="box-verde">
+    <h2>🏆 Festival de Futebol Amador Bolaverdão 2025/2026</h2>
+    <p><strong>Esporte, Cultura e Comunidade em Movimento</strong></p>
+    <p>O Festival Bolaverdão é uma iniciativa esportiva e sociocultural que promove integração comunitária e fortalecimento dos vínculos sociais por meio do futebol amador em Teofilândia (Bahia). Realização do Clube dos Tenistas da Bahia (CTB) com incentivo da Lei nº 11.438/2006.</p>
+  </section>
+
+  <!-- OFICINAS -->
+  <section id="oficinas">
+    <h2>Conteúdo das Oficinas Temáticas</h2>
+    <p>🧍‍♂️ <strong>Oficina 1 – Promoção da Saúde e Bem-Estar:</strong> Cuidados com o corpo, alimentação, saúde mental e equilíbrio emocional.</p>
+    <p>🕊️ <strong>Oficina 2 – Prevenção à Violência e Convivência Pacífica:</strong> Esporte como ferramenta de paz e controle emocional.</p>
+    <p>🌱 <strong>Oficina 3 – Preservação Ambiental e Sustentabilidade:</strong> Redução de lixo, limpeza do campo e Time Sustentável.</p>
+    <p>⚖️ <strong>Oficina 4 – Igualdade de Gênero no Esporte:</strong> Prevenção ao assédio, campanha “Esporte é de Todos”.</p>
+    <p>🪶 <strong>Oficina 5 – Cultura Popular e História do Futebol:</strong> Memórias do futebol amador, mural e documentário digital.</p>
+  </section>
+
+  <!-- CRONOGRAMA -->
+  <section id="cronograma">
+    <h2>Cronograma do Festival</h2>
+    <table>
+      <tr><th>Data</th><th>Atividade</th><th>Tipo</th><th>Público / Responsável</th><th>Indicadores</th></tr>
+      <tr><td>30/08/2025</td><td>Envio dos ofícios e convites</td><td>Institucional</td><td>Coordenação Geral</td><td>100% equipes notificadas</td></tr>
+      <tr><td>02/09/2025</td><td>Criação das artes dos uniformes</td><td>Comunicação</td><td>Designer CTB</td><td>Artes aprovadas</td></tr>
+      <tr><td>06/09/2025</td><td>Reunião da Comissão Organizadora</td><td>Técnica</td><td>Coordenação CTB</td><td>Ata registrada</td></tr>
+      <tr><td>13–27/09/2025</td><td>Inscrição e reunião das musas</td><td>Cultural / Social</td><td>Coordenação Cultural</td><td>100% equipes representadas</td></tr>
+      <tr><td>29/11/2025</td><td>Entrega dos uniformes + Oficina 1</td><td>Educacional</td><td>CTB / Prof. Saúde</td><td>≥ 70% participação</td></tr>
+      <tr><td>30/11/2025</td><td>Abertura Oficial</td><td>Esportivo / Social</td><td>Comunidade</td><td>≥ 10 municípios</td></tr>
+      <tr><td>04/01/2026</td><td>Final do Bolaverdão</td><td>Esportivo</td><td>Comissão Técnica</td><td>Realização conforme regulamento</td></tr>
+    </table>
+  </section>
+
+  <!-- INSCRIÇÃO -->
+  <section id="inscricao">
+    <h2>Formulário de Inscrição</h2>
+    <form id="inscricaoForm">
+      <label>Nome da Equipe</label>
+      <input type="text" id="nomeEquipe" required>
+
+      <label>Nome do Responsável</label>
+      <input type="text" id="responsavel" required>
+
+      <label>CPF do Responsável</label>
+      <input type="text" id="cpf" required placeholder="000.000.000-00">
+
+      <label>Cidade</label>
+      <input type="text" id="cidade" required>
+
+      <label><input type="checkbox" id="concorda" required> Concordo com o regulamento e termo de uso da imagem.</label>
+
+      <button type="submit" class="btn">Enviar Inscrição</button>
+
+      <div class="pdf-links">
+        <a href="assets/regulamento.pdf" target="_blank">📄 Regulamento</a>
+        <a href="assets/termo.pdf" target="_blank">📜 Termo</a>
+      </div>
+    </form>
+  </section>
+
+  <!-- EQUIPE -->
+  <section id="equipe">
+    <h2>Equipe Bolaverdão 2025/2026</h2>
+    <ul>
+      <li>Paulo Carneiro – Presidente CTB</li>
+      <li>Marcos Leão – Presidente Bolaverdão</li>
+      <li>Franklin Oliveira – Coordenador Geral</li>
+      <li>Samir Abdala – Coordenador Técnico</li>
+    </ul>
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato">
+    <h2>Contato</h2>
+    <p>Entre em contato com o CTB para informações, parcerias e imprensa.</p>
+    <p><strong>Email:</strong> contato@ctb-ba.com.br</p>
+    <p><strong>Telefone:</strong> (71) 98530-4903</p>
+  </section>
+
+  <!-- RODAPÉ -->
   <footer>
-    <p>CLUBE DOS TENISTAS DA BAHIA – CNPJ 23.146.328/0001-16<br>
-       Marcos Leão (75) 99881-4111 • Paulo Carneiro (71) 98530-4903</p>
+    <div>
+      <p>CLUBE DOS TENISTAS DA BAHIA<br>CNPJ 23.146.328/0001-16</p>
+    </div>
+    <div>
+      <p>Marcos Leão - (75) 99881-4111<br>Paulo Carneiro - (71) 98530-4903</p>
+    </div>
+    <div>
+      <img src="assets/ctb1.png" alt="CTB1" height="50">
+    </div>
   </footer>
 
   <script>
